@@ -1,5 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
+from prometheus_fastapi_instrumentator import Instrumentator
 
 from . import models, schemas
 from .database import engine, Base, get_db
@@ -7,6 +8,8 @@ from .database import engine, Base, get_db
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="InnerCircle Lite API")
+
+Instrumentator().instrument(app).expose(app)
 
 
 @app.get("/health")

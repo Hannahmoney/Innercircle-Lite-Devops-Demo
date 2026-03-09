@@ -33,3 +33,19 @@ output "alb_target_group_arn" {
   description = "ARN of the ALB target group"
   value       = aws_lb_target_group.app_tg.arn
 }
+
+#ecs
+output "ecs_cluster_name" {
+  description = "Name of the ECS cluster"
+  value       = aws_ecs_cluster.main.name
+}
+
+output "ecs_service_name" {
+  description = "Name of the ECS service"
+  value       = aws_ecs_service.app.name
+}
+
+output "ecs_task_definition_arn" {
+  description = "ARN of the ECS task definition"
+  value       = aws_ecs_task_definition.app.arn
+}

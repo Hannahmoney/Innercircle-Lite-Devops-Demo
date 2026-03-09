@@ -11,3 +11,5 @@ private_subnet_2_cidr = "10.0.12.0/24"
 
 az_1                  = "eu-west-1a"
 az_2                  = "eu-west-1b"
+
+container_port = 8000

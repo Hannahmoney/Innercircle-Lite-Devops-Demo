@@ -42,3 +42,9 @@ variable "az_2" {
   description = "Availability Zone 2"
   type        = string
 }
+
+#ECS
+variable "container_port" {
+  description = "Port the application container listens on"
+  type        = number
+}
