@@ -49,3 +49,14 @@ output "ecs_task_definition_arn" {
   description = "ARN of the ECS task definition"
   value       = aws_ecs_task_definition.app.arn
 }
+
+#rds
+output "rds_endpoint" {
+  description = "Endpoint of the RDS MySQL instance"
+  value       = aws_db_instance.main.endpoint
+}
+
+output "rds_db_name" {
+  description = "Database name"
+  value       = aws_db_instance.main.db_name
+}

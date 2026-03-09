@@ -13,3 +13,10 @@ az_1                  = "eu-west-1a"
 az_2                  = "eu-west-1b"
 
 container_port = 8000
+
+#database
+db_name              = "innercircle"
+db_username          = "adminuser"
+db_password          = "InnerCircle123!"
+db_instance_class    = "db.t3.micro"
+db_allocated_storage = 20

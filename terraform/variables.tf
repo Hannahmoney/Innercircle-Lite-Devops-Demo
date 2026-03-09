@@ -48,3 +48,30 @@ variable "container_port" {
   description = "Port the application container listens on"
   type        = number
 }
+
+#Database
+variable "db_name" {
+  description = "Name of the application database"
+  type        = string
+}
+
+variable "db_username" {
+  description = "Master username for the database"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Master password for the database"
+  type        = string
+  sensitive   = true
+}
+
+variable "db_instance_class" {
+  description = "Instance class for the RDS database"
+  type        = string
+}
+
+variable "db_allocated_storage" {
+  description = "Allocated storage for the RDS database in GB"
+  type        = number
+}
